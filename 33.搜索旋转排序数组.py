@@ -36,14 +36,14 @@ class Solution(object):
             mid = (left + right) / 2
             if nums[mid] == target:
                 return mid
-            if nums[left] < nums[mid]:   # 左侧有序
+            if nums[left] <= nums[mid]:   # 左侧有序    (闭区间)
                 if nums[left] <= target and target < nums[mid]:  # target在左侧，注意边界问题
                     right = mid - 1
                 else:
-                    left = mid
+                    left = mid + 1
             else:    # 右侧有序
                 if nums[mid] < target and target <= nums[right]: # target在右侧，注意边界问题
                     left = mid + 1
                 else:
-                    right = mid
+                    right = mid - 1
         return -1
