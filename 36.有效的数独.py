@@ -23,4 +23,3 @@ class Solution(object):
                     if row[i][num] > 1 or column[j][num] > 1 or box[box_index][num] > 1:
                         return False
         return True
-    
