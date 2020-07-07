@@ -16,6 +16,10 @@ https://leetcode-cn.com/problems/powx-n/
 说明:
     -100.0 < x < 100.0
     n 是 32 位有符号整数
+
+解题注意点：
+    1. n的正负问题
+    2. n的奇偶问题
 """
 
 class Solution(object):
