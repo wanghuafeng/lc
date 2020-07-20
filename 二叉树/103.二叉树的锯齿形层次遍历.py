@@ -33,3 +33,49 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[List[int]]
         """
+        if not root:
+            return []
+        res = []
+        def bfs(node, level):
+            if not node:
+                return
+            if len(res) == level:
+                res.append([])
+            if level % 2 == 0:
+                res[level].append(node.val)
+            else:
+                res[level].insert(0, node.val)
+            bfs(node.left, level+1)
+            bfs(node.right, level+1)
+        bfs(root, 0)
+        return res
+
+
+class Solution(object):
+    def zigzagLevelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+        res = []
+        queue = [root]
+        l2r = True
+        while queue:
+            tmp_queue = []
+            for _ in range(len(queue)):
+                node = queue.pop(0)
+                if not node:
+                    continue
+                if l2r: # 从左至右入栈
+                    tmp_queue.append(node.val)
+                else:   # 从右至左入栈
+                    tmp_queue.insert(0, node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            l2r = not l2r   # 一层遍历完毕，调整方向
+            res.append(tmp_queue)
+        return res
