@@ -16,8 +16,8 @@ https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
         /  \
        15   7
     返回它的最大深度 3 。
-1.迭代
-2.递归
+1.迭代 bfs
+2.递归 dfs
 """
 # Definition for a binary tree node.
 # class TreeNode(object):
