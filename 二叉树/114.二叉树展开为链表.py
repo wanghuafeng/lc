@@ -49,11 +49,11 @@ class Solution(object):
         """
         if not root:
             return
-        self.flatten(root.left)
-        self.flatten(root.right)
+        self.flatten(root.left)  # 将根节点的左子树变成链表
+        self.flatten(root.right)    # 将根节点的左子树变成链表
         tmp_right = root.right
-        root.right = root.left
-        root.left = None
-        while root.right:
+        root.right = root.left   # 把树的右边换成左边的链表
+        root.left = None    # 左边置空
+        while root.right:   # 找到树的最右边的节点
             root = root.right
-        root.right = tmp_right
+        root.right = tmp_right  # 把右边的链表接到刚才树的最右边的节点
