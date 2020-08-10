@@ -36,12 +36,13 @@ class Solution(object):
         n = len(s)
         if n < 4 or n > 12: # 字符串的长度小于 4 或者大于 12
             return []
+        # 中间两个参数解释：pos-当前遍历到 s 字符串中的位置，chosen_path 当前存放已经确定好的 ip 段的数量
         def traceback(chosen_path, pos):
-            if len(chosen_path) == 4 and pos == n:
+            if len(chosen_path) == 4 and pos == n:  # 如果此时 pos 也刚好遍历完整个 s
                 res.append('.'.join(chosen_path))
                 return
-            for i in range(1, 4):
-                if pos+i > n:
+            for i in range(1, 4):   # ip 地址每段最多有三个数字
+                if pos+i > n:   # 如果当前位置距离 s 末尾小于 3 就不用再分段了，直接跳出循环即可
                     break
                 segment = s[pos:pos+i]
                 int_seg = int(segment)
