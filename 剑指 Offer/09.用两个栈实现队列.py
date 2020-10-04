@@ -18,26 +18,34 @@ https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
 提示：
     1 <= values <= 10000
     最多会对 appendTail、deleteHead 进行 10000 次调用
+
 """
 
 class CQueue(object):
 
     def __init__(self):
-        pass
+        self.in_stack = []  # 只负责入栈
+        self.out_stack = [] # 只负责出栈
 
     def appendTail(self, value):
         """
         :type value: int
         :rtype: None
         """
+        self.in_stack.append(value)
 
 
     def deleteHead(self):
         """
         :rtype: int
         """
-
-
+        if self.out_stack:  # 如果出栈队列有元素，则直接返回
+            return self.out_stack.pop()
+        if not self.in_stack:  # 如果出栈队列没有元素，入栈队列也没有元素，则直接返回-1
+            return -1
+        while self.in_stack:    # 如果出栈队列没有元素，出栈队列中有元素
+            self.out_stack.append(self.in_stack.pop())
+        return self.out_stack.pop()
 
 # Your CQueue object will be instantiated and called as such:
 # obj = CQueue()
