@@ -47,6 +47,7 @@ class Solution(object):
                 votes -= 1
         return x
 
+
 l = [1, 2, 3, 2, 2, 2, 5, 4, 2]
 r = Solution().majorityElement(l)
 print(r)
