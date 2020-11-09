@@ -55,7 +55,7 @@ class Solution(object):
         p = self.partition(arr, l, r)
         if p == self.k:
             return arr[:self.k+1]
-        if p > self.k:  
+        if p > self.k:
             return self.quick_sort(arr, l, p-1)
         else:
             return self.quick_sort(arr, p+1, r)
