@@ -46,3 +46,4 @@ class Solution(object):
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
+

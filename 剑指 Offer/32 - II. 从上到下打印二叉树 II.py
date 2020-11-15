@@ -50,3 +50,49 @@ class Solution(object):
             if node.right:
                 queue.append((node.right, level+1))
         return res
+
+class Solution(object):
+    def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+        res = []
+        queue = [root]
+        while queue:
+            tmp = []
+            level_tmp = []  # 借助辅助变量
+            for node in queue:
+                level_tmp.append(node.val)
+                if node.left:
+                    tmp.append(node.left)
+                if node.right:
+                    tmp.append(node.right)
+            res.append(level_tmp)
+            queue = tmp
+        return res
+
+class Solution(object):
+    def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+        res = []
+        queue = [root]
+        while queue:
+            tmp = []
+            for i in range(len(queue)):
+                node = queue.pop(0)
+                tmp.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            res.append(tmp)
+        return res
+
