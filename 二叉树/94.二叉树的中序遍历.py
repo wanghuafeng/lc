@@ -47,6 +47,7 @@ class Solution(object):
         traceback(root)
         return res
 
+
 class Solution(object):
     def inorderTraversal(self, root):
         """
