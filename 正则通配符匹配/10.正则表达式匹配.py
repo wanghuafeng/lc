@@ -1,4 +1,5 @@
 #!-*- coding:utf-8 -*-
+
 """
 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
 
@@ -18,6 +19,7 @@
     解释: "a" 无法匹配 "aa" 整个字符串
 """
 
+
 class Solution(object):
     def isMatch(self, s, p):
         """
@@ -25,3 +27,4 @@ class Solution(object):
         :type p: str
         :rtype: bool
         """
+    
