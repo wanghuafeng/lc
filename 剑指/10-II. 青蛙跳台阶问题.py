@@ -54,4 +54,4 @@ class Solution(object):
             a, b = b, a+b
         return b % 1000000007
 
-print Solution().numWays(7)
+print(Solution().numWays(7))

@@ -34,4 +34,4 @@ class Solution(object):
 
 
 nums = [3,4,5,1,2]
-print Solution().minArray(nums)
+print(Solution().minArray(nums))

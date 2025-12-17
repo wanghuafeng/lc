@@ -59,4 +59,4 @@ class Solution(object):
 
 board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
 word = "ABCCED"
-print Solution().exist(board, word)
+print(Solution().exist(board, word))

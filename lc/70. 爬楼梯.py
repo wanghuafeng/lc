@@ -55,7 +55,7 @@ class Solution(object):
         return b
 
 
-print Solution().climbStairs(5)
+print(Solution().climbStairs(5))
 
 
 

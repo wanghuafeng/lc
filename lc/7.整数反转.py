@@ -26,10 +26,10 @@ class Solution(object):
         reverse_x = 0
         while x > 0:
             reverse_x = reverse_x * 10 + x % 10
-            x /= 10
+            x //= 10
         if reverse_x < - 2**31 or reverse_x > 2**31 - 1:
             return 0
         return reverse_x if flag > 0 else -reverse_x
 
 x = -123
-print Solution().reverse(x)
+print(Solution().reverse(x))

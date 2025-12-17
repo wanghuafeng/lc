@@ -36,7 +36,7 @@ class Solution(object):
             if n % 2 == 1:
                 res *= x
             x *= x
-            n /= 2
+            n //= 2
         return res
 
-print Solution().myPow(2, 10)
+print(Solution().myPow(2, 10))

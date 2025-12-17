@@ -38,9 +38,9 @@ class Solution(object):
             if n % 2 == 1:  # 奇数
                 res *= x
             x *= x
-            n /= 2
+            n //= 2
         return res
-print Solution().myPow(2.0, -2)
+print(Solution().myPow(2.0, -2))
 
 class Solution(object):
     def myPow(self, x, n):
@@ -53,7 +53,7 @@ class Solution(object):
         def multi(x, n):
             if n == 0:
                 return 1
-            y = multi(x, n/2)
+            y = multi(x, n//2)
             if n % 2 == 0:
                 ans = y * y
             else:

@@ -40,4 +40,4 @@ class Solution(object):
 
 m = 7
 n = 3
-print Solution().uniquePaths(m, n)
+print(Solution().uniquePaths(m, n))

@@ -34,10 +34,10 @@ class Solution(object):
             tail = x%10
             if head != tail:
                 return False
-            x = (x%dev)/10  #  输入砍掉首尾数字
-            dev /= 100  # 去掉首尾两位数字后，dev需减两位
+            x = (x%dev)//10  #  输入砍掉首尾数字
+            dev //= 100  # 去掉首尾两位数字后，dev需减两位
         return True
 
 
 x = 121
-print Solution().isPalindrome(x)
+print(Solution().isPalindrome(x))

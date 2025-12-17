@@ -50,4 +50,4 @@ matrix = [
   [10, 13, 14, 17, 24],
   [18, 21, 23, 26, 30]
 ]
-print Solution().findNumberIn2DArray(matrix, 20)
+print(Solution().findNumberIn2DArray(matrix, 20))

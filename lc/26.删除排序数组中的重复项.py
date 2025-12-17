@@ -38,4 +38,4 @@ class Solution(object):
 nums = [1,1,2]
 # nums = [0,0,1,1,1,2,2,3,3,4]
 # nums = [1,1,1,2,2,3]
-print Solution().removeDuplicates(nums)
+print(Solution().removeDuplicates(nums))

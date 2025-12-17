@@ -1,2 +1,2 @@
-# lc
-lc daily
+
+学习网站: https://labuladong.online/algo/home/

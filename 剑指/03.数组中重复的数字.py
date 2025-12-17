@@ -58,4 +58,4 @@ class Solution(object):
         return -1
 
 nums = [2, 3, 1, 0, 2, 5, 3]
-print Solution().findRepeatNumber(nums)
+print(Solution().findRepeatNumber(nums))

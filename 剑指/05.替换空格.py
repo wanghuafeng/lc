@@ -25,5 +25,5 @@ class Solution(object):
         return ''.join(res)
 
 s = " 1  "
-print s.split()
-print Solution().replaceSpace(s)
+print(s.split())
+print(Solution().replaceSpace(s))

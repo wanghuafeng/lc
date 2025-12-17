@@ -41,4 +41,4 @@ class Solution(object):
         return nums
 
 nums = [1,2,3,4]
-print Solution().exchange(nums)
+print(Solution().exchange(nums))
