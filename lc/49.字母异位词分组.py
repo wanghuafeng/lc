@@ -23,11 +23,18 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        str_dic = {}
-        for s in strs:
-            key = ''.join(sorted(s))
-            if key in str_dic:
-                str_dic[key].append(s)
+        hash_mapping = {}
+        for str in strs:
+            sort_str = ''.join(sorted(str))
+            if sort_str in hash_mapping:
+                hash_mapping[sort_str].append(str)
             else:
-                str_dic[key] = [s]
-        return str_dic.values()
+                hash_mapping[sort_str] = [str]
+        return hash_mapping.values()
+
+strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+print(Solution().groupAnagrams(strs))
+
+"""
+    先对数组中的字符串进行排序，排序后进行比对。注意：sorted()对字符串进行排序时，返回的是一个数组，需要做拼接成字符串
+"""
